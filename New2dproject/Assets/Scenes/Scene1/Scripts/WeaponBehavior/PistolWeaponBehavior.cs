@@ -15,6 +15,7 @@ using UnityEngine;
 	{
 		//public Rigidbody bulletPrefab;
 		private float bulletSpeed = 10.0f;
+		public Vector3 spreadRange;
 
 		public PistolWeaponBehavior ()
 		{
@@ -37,6 +38,7 @@ using UnityEngine;
 			
 			
 			instantiatedProjectile.velocity = launchVelocity;
+
 			//		instantiatedProjectile.transform.LookAt(transform.position);
 			//		instantiatedProjectile.AddForce(instantiatedProjectile.transform.forward * bulletSpeed);
 		}

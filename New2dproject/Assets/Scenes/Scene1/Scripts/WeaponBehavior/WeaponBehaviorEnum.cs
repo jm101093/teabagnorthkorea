@@ -13,6 +13,7 @@ using System;
 		{
 			PISTOL,
 			MACHINE_GUN,
-			SHOTGUN
+			SHOTGUN,
+			GRENADE
 		}
 

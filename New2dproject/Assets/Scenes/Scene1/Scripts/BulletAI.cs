@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BulletAI : MonoBehaviour {
 	
-	int damageValue = 1;
+	public int damageValue = 1;
 
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Enemy"){
