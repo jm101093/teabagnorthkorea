@@ -1,8 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Scene1/Scripts/WeaponBehavior/PistolWeaponBehavior.cs">
     <Files>
-      <File FileName="Assets/Scenes/Scene1/Scripts/PlayerAttack.cs" Line="35" Column="5" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/PlayerAttack.cs" Line="18" Column="68" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/PlayerAttack.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/WeaponBehavior/WeaponBehaviorEnum.cs" Line="17" Column="4" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/WeaponBehavior/WeaponBehaviorFactory.cs" Line="14" Column="19" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/WeaponBehavior/WeaponBehavior.cs" Line="15" Column="117" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/WeaponBehavior/PistolWeaponBehavior.cs" Line="24" Column="4" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/BulletAI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/BulletAIy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/CameraSmoothfollow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/DestroyOnInvisible.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/Enemy2D.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Scene1/Scripts/Shoot.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
