@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scenes\Scene1\Scripts\WeaponBehavior\grenadeWeaponBehavior.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\distroyAfterPlay.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\gibOnColide.cs" />
+     <Compile Include="Assets\Scenes\Scene1\Scripts\grenadeBehavior.cs" />
      <Compile Include="Assets\Various Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Various Scripts\MoveLeftAndRight.cs" />
      <Compile Include="Assets\Various Scripts\runnerScript.cs" />
