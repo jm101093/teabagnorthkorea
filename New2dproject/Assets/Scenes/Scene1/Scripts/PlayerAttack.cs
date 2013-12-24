@@ -15,6 +15,9 @@ using System.Collections;
 		if (Input.GetKeyDown(KeyCode.G)){
 			grenadeAttack();
 		}
+		if (Input.GetMouseButtonDown(0)){
+			bulletAttack();
+		}
 	}
 	void bulletAttack() {
 		WeaponBehavior behavior = WeaponBehaviorFactory.GetWeaponBehavior(WeaponBehaviorEnum.PISTOL);
