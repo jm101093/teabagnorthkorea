@@ -33,6 +33,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	void playerHealed(int healed){
+		if (playersHealth > 0){
+			playersHealth++;
+			}
+
+		}
+
 	void RestartScene(){
 		Application.LoadLevel(Application.loadedLevel);
 	}

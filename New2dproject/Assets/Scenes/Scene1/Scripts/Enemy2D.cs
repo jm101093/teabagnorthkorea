@@ -13,6 +13,8 @@ public class Enemy2D : MonoBehaviour {
 	//units enemy moves left
 	public int moveSpeed = 2;
 	public int damageValue = 1;
+	//sound effect for hurt
+	public AudioClip owie;
 
 	//enemy move Dirrection
 	public bool moveRight = true;
@@ -68,18 +70,23 @@ public class Enemy2D : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			gameManager.SendMessage("playerDamaged", damageValue, SendMessageOptions.DontRequireReceiver);
 			gameManager.playerMovement.SendMessage("TakenDamage",SendMessageOptions.DontRequireReceiver);
+
 		}
 	}
 
 	void EnemyDamaged(int damaged){
 		if(enemyHealth > 0){
 			enemyHealth -= damaged;
+			audio.Play();
 			print ("enemyHealth" + enemyHealth.ToString());
+
 		}
 		if(enemyHealth <=0){
 			enemyHealth = 0;
+			audio.Play();
 			Destroy(gameObject);
 			print ("enemyHealth" + enemyHealth.ToString());
+
 		}
 	}
 }

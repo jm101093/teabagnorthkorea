@@ -94,4 +94,10 @@ public class PlayerMovement : MonoBehaviour {
 		renderer.enabled = true;
 		yield return new WaitForSeconds(takenDamage);
 	}
+
+	public IEnumerator healed() {
+		renderer.enabled = false;
+		yield return new WaitForSeconds(takenDamage);
+		renderer.enabled = true;
+	}
 }
