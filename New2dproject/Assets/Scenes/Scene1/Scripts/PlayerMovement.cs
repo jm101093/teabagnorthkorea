@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour {
 	
 	public float takenDamage = 0.5f;
 
+	public float Healed = 0.1f;
+
 	//jumping data
 	public bool letsJump = false;
 	public float jumpStrength = 0.0f;
@@ -80,6 +82,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	//damage flashing thing
 	public IEnumerator TakenDamage() {
 		renderer.enabled = false;
 		yield return new WaitForSeconds(takenDamage);
@@ -95,9 +98,10 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds(takenDamage);
 	}
 
+	//health pickup flash
 	public IEnumerator healed() {
 		renderer.enabled = false;
-		yield return new WaitForSeconds(takenDamage);
+		yield return new WaitForSeconds(Healed);
 		renderer.enabled = true;
 	}
 }

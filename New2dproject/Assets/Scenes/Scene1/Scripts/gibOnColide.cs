@@ -5,16 +5,7 @@ public class gibOnColide : MonoBehaviour {
 	
 	public GameObject[] gibs;
 	public GameObject[] staticGibs;
-	
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 	
 	void OnCollisionEnter()
 	{
@@ -27,6 +18,5 @@ public class gibOnColide : MonoBehaviour {
 			Instantiate(staticGib,transform.position,transform.rotation);
 		}
 
-		Destroy(gameObject);
 	}
 }

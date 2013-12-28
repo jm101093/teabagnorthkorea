@@ -16,6 +16,8 @@ public class Enemy2D : MonoBehaviour {
 	//sound effect for hurt
 	public AudioClip owie;
 
+	public GameObject die;
+
 	//enemy move Dirrection
 	public bool moveRight = true;
 
@@ -31,17 +33,17 @@ public class Enemy2D : MonoBehaviour {
 		endPos = startingPos + unitsToMove;
 
 		if(basicEnemy){
-			enemyHealth = 3;
+			enemyHealth = 6;
 			print("enemyHealth" + enemyHealth.ToString());
 		}
 
 		if(advancedEnemy){
-			enemyHealth = 5;
+			enemyHealth = 10;
 			print("enemyHealth" + enemyHealth.ToString());
 		}
 
 		if(motherFucker){
-			enemyHealth = 10;
+			enemyHealth = 18;
 			print("enemyHealth" + enemyHealth.ToString());
 		}
 	}
@@ -84,6 +86,7 @@ public class Enemy2D : MonoBehaviour {
 		if(enemyHealth <=0){
 			enemyHealth = 0;
 			audio.Play();
+			Instantiate(die, transform.position, transform.rotation);
 			Destroy(gameObject);
 			print ("enemyHealth" + enemyHealth.ToString());
 

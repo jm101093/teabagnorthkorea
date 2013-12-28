@@ -14,6 +14,7 @@ public class grenadeBehavior : MonoBehaviour {
 	}
 	
 	IEnumerator PhysicsOff(float waitTime) {
+		grenadeRigidBody.Sleep();
 		grenadeRigidBody.detectCollisions = false;
 		print("Physics off " + Time.time);
 		yield return new WaitForSeconds(waitTime);
@@ -23,6 +24,7 @@ public class grenadeBehavior : MonoBehaviour {
 	
 	IEnumerator WaitAndPrint(float waitTime) {
 		grenadeRigidBody.detectCollisions = true;
+		grenadeRigidBody.WakeUp();
 		print("Physics on " + Time.time);
 		yield return new WaitForSeconds(waitTime);
 		audio.Play();
