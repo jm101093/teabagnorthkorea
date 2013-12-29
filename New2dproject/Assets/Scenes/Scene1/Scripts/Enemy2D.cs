@@ -16,12 +16,16 @@ public class Enemy2D : MonoBehaviour {
 	//sound effect for hurt
 	public AudioClip owie;
 
+	//used for reload
 	public bool CanShoot = true;
 
+	//calls explosion
 	public GameObject die;
 
+	//enemy weapon
 	public GameObject enemyBullett;
 
+	//randomly generated shoot time
 	public float waitToShootTime;
 
 	//enemy move Dirrection
@@ -36,8 +40,8 @@ public class Enemy2D : MonoBehaviour {
 
 	void Awake() {
 
-		//random shoot time
-		waitToShootTime = Random.Range(2.0f, 6.0f);
+		//random shoot time generation
+		waitToShootTime = Random.Range(5.0f, 10.0f);
 		print ("Shooting time is " + waitToShootTime.ToString());
 
 		//walking
@@ -91,8 +95,8 @@ public class Enemy2D : MonoBehaviour {
 	//shooting or bug here
 
 	IEnumerator ShootTime(float waitToShootTime){
-		yield return new WaitForSeconds(waitToShootTime);
 		CanShoot = false;
+		yield return new WaitForSeconds(waitToShootTime);
 		print ("Shooting boom boom " + waitToShootTime.ToString());
 		Instantiate(enemyBullett, transform.position, transform.rotation);
 	}
@@ -101,7 +105,7 @@ public class Enemy2D : MonoBehaviour {
 
 	IEnumerator Reload(float waitToShootTime){
 		print ("Reloading " + waitToShootTime.ToString());
-		yield return new WaitForSeconds(15);
+		yield return new WaitForSeconds(30);
 		CanShoot = true;
 	}
 

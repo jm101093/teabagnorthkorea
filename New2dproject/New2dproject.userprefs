@@ -1,14 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\Scene1\Scripts\EnemyBullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\Scene1\Scripts\Enemy2D.cs">
     <Files>
-      <File FileName="Assets\Scenes\Scene1\Scripts\EnemyBullet.cs" Line="23" Column="18" />
-      <File FileName="Assets\Scenes\Scene1\Scripts\Crate1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scenes\Scene1\Scripts\Enemy2D.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scenes\Scene1\Scripts\Enemy2D.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scenes\Scene1\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scenes\Scene1\Scripts\Enemy2D.cs" Line="1" Column="1" />
       <File FileName="Assets\Scenes\Scene1\Scripts\WeaponBehavior\grenadeBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scenes\Scene1\Scripts\WeaponBehavior\WeaponBehaviorFactory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scenes\Scene1\Scripts\EnemyBullet.cs" Line="23" Column="18" />
-      <File FileName="Assets\Scenes\Scene1\Scripts\PlayerMovement.cs" Line="1" Column="19" />
+      <File FileName="Assets\Scenes\Scene1\Scripts\PlayerAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scenes\Scene1\Scripts\WeaponBehavior\PistolWeaponBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
