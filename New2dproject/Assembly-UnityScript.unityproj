@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Scene1\Scripts\paralaxJAva.js" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\resetPlayerScript.js" />
      <None Include="Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
