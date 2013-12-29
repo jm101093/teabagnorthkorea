@@ -16,7 +16,13 @@ public class Enemy2D : MonoBehaviour {
 	//sound effect for hurt
 	public AudioClip owie;
 
+	public bool CanShoot = true;
+
 	public GameObject die;
+
+	public GameObject enemyBullett;
+
+	public float waitToShootTime;
 
 	//enemy move Dirrection
 	public bool moveRight = true;
@@ -29,6 +35,12 @@ public class Enemy2D : MonoBehaviour {
 	public bool motherFucker;
 
 	void Awake() {
+
+		//random shoot time
+		waitToShootTime = Random.Range(2.0f, 6.0f);
+		print ("Shooting time is " + waitToShootTime.ToString());
+
+		//walking
 		startingPos = transform.position.x;
 		endPos = startingPos + unitsToMove;
 
@@ -50,6 +62,13 @@ public class Enemy2D : MonoBehaviour {
 
 	void Update() {
 
+		//please dont kill me the bug is here
+		if(CanShoot = true){
+			print ("Canshoot if statement " + CanShoot.ToString());
+			StartCoroutine(ShootTime(waitToShootTime));
+			StartCoroutine(Reload(waitToShootTime));
+		}
+
 		if(moveRight){
 			this.rigidbody.position += Vector3.right * moveSpeed * Time.deltaTime;
 		}
@@ -66,6 +85,24 @@ public class Enemy2D : MonoBehaviour {
 			moveRight = true;
 		}
 
+
+	}
+
+	//shooting or bug here
+
+	IEnumerator ShootTime(float waitToShootTime){
+		yield return new WaitForSeconds(waitToShootTime);
+		CanShoot = false;
+		print ("Shooting boom boom " + waitToShootTime.ToString());
+		Instantiate(enemyBullett, transform.position, transform.rotation);
+	}
+
+	//reload time  or bug here
+
+	IEnumerator Reload(float waitToShootTime){
+		print ("Reloading " + waitToShootTime.ToString());
+		yield return new WaitForSeconds(15);
+		CanShoot = true;
 	}
 
 	void OnTriggerEnter(Collider col){

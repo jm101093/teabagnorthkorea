@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scenes\Scene1\Scripts\Crate1.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\DestroyOnInvisible.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\Enemy2D.cs" />
+     <Compile Include="Assets\Scenes\Scene1\Scripts\EnemyBullet.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\Health.cs" />
      <Compile Include="Assets\Scenes\Scene1\Scripts\PlayerAttack.cs" />

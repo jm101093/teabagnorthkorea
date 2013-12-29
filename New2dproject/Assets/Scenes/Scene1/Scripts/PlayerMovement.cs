@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-	
+
+	public GameManager gameManager;
+
 	public float movementSpeed = 5.0f;
 	
 	public float takenDamage = 0.5f;
@@ -17,6 +19,9 @@ public class PlayerMovement : MonoBehaviour {
 	public float gravity = 36.0f;
 	public float jumpVariable;
 	public float jumpHeight = 5.5f;
+
+	//enemy bullet damage
+	public int damageValue;
 
 	// Use this for initialization
 	void Start() {
@@ -80,6 +85,14 @@ public class PlayerMovement : MonoBehaviour {
 			System.Console.WriteLine("setting rigidbody.velocity, jumpVariable: " + jumpVariable); 
 			rigidbody.velocity = new Vector3(0, jumpVariable, 0);
 		}
+	}
+
+	void playerDamaged(int damage){
+		print ("damageValueP " + damage.ToString());
+		print ("damageValuePM " + damageValue.ToString());
+		gameManager.SendMessage("playerDamaged", damageValue, SendMessageOptions.DontRequireReceiver);
+			
+		TakenDamage();
 	}
 
 	//damage flashing thing
