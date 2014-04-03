@@ -41,7 +41,7 @@ public class Enemy2D : MonoBehaviour {
 	void Awake() {
 
 		//random shoot time generation
-		waitToShootTime = Random.Range(5.0f, 10.0f);
+		waitToShootTime = Random.Range(10.0f, 20.0f);
 		print ("Shooting time is " + waitToShootTime.ToString());
 
 		//walking
@@ -62,17 +62,15 @@ public class Enemy2D : MonoBehaviour {
 			enemyHealth = 18;
 			print("enemyHealth" + enemyHealth.ToString());
 		}
+		if(CanShoot = true){
+			InvokeRepeating("ShootTime", 5, waitToShootTime);
+			print ("Canshoot if statement " + CanShoot.ToString());
+		}
 	}
 
 	void Update() {
 
 		//please dont kill me the bug is here
-//		if(CanShoot = true){
-//			print ("Canshoot if statement " + CanShoot.ToString());
-//			StartCoroutine(ShootTime(waitToShootTime));
-//			StartCoroutine(Reload(waitToShootTime));
-//		}
-
 		if(moveRight){
 			this.rigidbody.position += Vector3.right * moveSpeed * Time.deltaTime;
 		}
@@ -93,21 +91,20 @@ public class Enemy2D : MonoBehaviour {
 	}
 
 	//shooting or bug here
-
-//	IEnumerator ShootTime(float waitToShootTime){
-//		CanShoot = false;
-//		yield return new WaitForSeconds(waitToShootTime);
-//		print ("Shooting boom boom " + waitToShootTime.ToString());
-//		Instantiate(enemyBullett, transform.position, transform.rotation);
-//	}
+	void ShootTime(){
+		Instantiate(enemyBullett, transform.position, transform.rotation);
+		print ("Shooting boom boom ");
+		CanShoot = false;
+		Reload (waitToShootTime);
+	}
 
 	//reload time  or bug here
 
-//	IEnumerator Reload(float waitToShootTime){
-//		print ("Reloading " + waitToShootTime.ToString());
-//		yield return new WaitForSeconds(30.0f);
-//		CanShoot = true;
-//	}
+	IEnumerator Reload(float waitToShootTime){
+		print ("Reloading " + waitToShootTime.ToString());
+		yield return new WaitForSeconds(10.0f);
+		CanShoot = true;
+	}
 
 	void OnTriggerEnter(Collider col){
 		if(col.gameObject.tag == "Player"){
