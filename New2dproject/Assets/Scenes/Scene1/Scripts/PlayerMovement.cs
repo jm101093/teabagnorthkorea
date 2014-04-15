@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour {
 	
 	public float takenDamage = 0.5f;
 
+	public AudioClip playerOwie;
+
 	public float Healed = 0.1f;
 
 	//jumping data
@@ -88,10 +90,10 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void playerDamaged(int damage){
-		print ("damageValueP " + damage.ToString());
-		print ("damageValuePM " + damageValue.ToString());
+		//print ("damageValueP " + damage.ToString());
+		//print ("damageValuePM " + damageValue.ToString());
 		gameManager.SendMessage("playerDamaged", damageValue, SendMessageOptions.DontRequireReceiver);
-			
+		audio.Play ();
 		TakenDamage();
 	}
 

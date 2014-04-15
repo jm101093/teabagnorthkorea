@@ -16,18 +16,18 @@ public class grenadeBehavior : MonoBehaviour {
 	}
 	
 	IEnumerator PhysicsOff(float waitTime) {
-		print("Physics off " + Time.time);
+		//print("Physics off " + Time.time);
 		yield return new WaitForSeconds(waitTime);
-		print("Physics off 2 " + Time.time);
+		//print("Physics off 2 " + Time.time);
 
 	}
 	
 	IEnumerator WaitAndPrint(float waitTime) {
 		grenadeRigidBody.WakeUp();
 		grenadeRigidBody.detectCollisions = true;
-		print("Physics on " + Time.time);
+		//print("Physics on " + Time.time);
 		yield return new WaitForSeconds(waitTime);
 		audio.Play();
-		print("WaitAndPrint " + Time.time);
+		//print("WaitAndPrint " + Time.time);
 	}
 }

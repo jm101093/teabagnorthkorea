@@ -29,7 +29,7 @@ void Update(){
 void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Player"){
 			other.gameObject.SendMessage("playerDamaged", damageValue, SendMessageOptions.DontRequireReceiver);
-			print ("damageValueEB " + damageValue.ToString());
+			//print ("damageValueEB " + damageValue.ToString());
 			Destroy(gameObject);
 		}
 	}

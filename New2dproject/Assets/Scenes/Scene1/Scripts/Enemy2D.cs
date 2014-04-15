@@ -42,7 +42,7 @@ public class Enemy2D : MonoBehaviour {
 
 		//random shoot time generation
 		waitToShootTime = Random.Range(10.0f, 20.0f);
-		print ("Shooting time is " + waitToShootTime.ToString());
+		//print ("Shooting time is " + waitToShootTime.ToString());
 
 		//walking
 		startingPos = transform.position.x;
@@ -50,21 +50,21 @@ public class Enemy2D : MonoBehaviour {
 
 		if(basicEnemy){
 			enemyHealth = 6;
-			print("enemyHealth" + enemyHealth.ToString());
+			//print("enemyHealth" + enemyHealth.ToString());
 		}
 
 		if(advancedEnemy){
 			enemyHealth = 10;
-			print("enemyHealth" + enemyHealth.ToString());
+			//print("enemyHealth" + enemyHealth.ToString());
 		}
 
 		if(motherFucker){
 			enemyHealth = 18;
-			print("enemyHealth" + enemyHealth.ToString());
+			//print("enemyHealth" + enemyHealth.ToString());
 		}
 		if(CanShoot = true){
 			InvokeRepeating("ShootTime", 5, waitToShootTime);
-			print ("Canshoot if statement " + CanShoot.ToString());
+			//print ("Canshoot if statement " + CanShoot.ToString());
 		}
 	}
 
@@ -93,7 +93,7 @@ public class Enemy2D : MonoBehaviour {
 	//shooting or bug here
 	void ShootTime(){
 		Instantiate(enemyBullett, transform.position, transform.rotation);
-		print ("Shooting boom boom ");
+		//print ("Shooting boom boom ");
 		CanShoot = false;
 		Reload (waitToShootTime);
 	}
@@ -101,7 +101,7 @@ public class Enemy2D : MonoBehaviour {
 	//reload time  or bug here
 
 	IEnumerator Reload(float waitToShootTime){
-		print ("Reloading " + waitToShootTime.ToString());
+		//print ("Reloading " + waitToShootTime.ToString());
 		yield return new WaitForSeconds(10.0f);
 		CanShoot = true;
 	}
@@ -118,7 +118,7 @@ public class Enemy2D : MonoBehaviour {
 		if(enemyHealth > 0){
 			enemyHealth -= damaged;
 			audio.Play();
-			print ("enemyHealth" + enemyHealth.ToString());
+			//print ("enemyHealth" + enemyHealth.ToString());
 
 		}
 		if(enemyHealth <=0){
@@ -126,7 +126,7 @@ public class Enemy2D : MonoBehaviour {
 			audio.Play();
 			Instantiate(die, transform.position, transform.rotation);
 			Destroy(gameObject);
-			print ("enemyHealth" + enemyHealth.ToString());
+			//print ("enemyHealth" + enemyHealth.ToString());
 
 		}
 	}

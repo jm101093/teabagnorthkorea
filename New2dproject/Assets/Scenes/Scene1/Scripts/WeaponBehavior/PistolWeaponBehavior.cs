@@ -33,8 +33,8 @@ using UnityEngine;
 			Vector3 targetDelta = (targetPosition - playerTransform.position);
 			targetDelta.z = 0;	//we dont care about the z-axis in a 2d game
 			Vector3 launchVelocity = targetDelta.normalized * bulletSpeed;	//Vector3.normalized returns a read-only copy of the vector with a magnitude of 1
-			print ("targetDelta.normalized = " + targetDelta.normalized.ToString());
-			print ("launchVelocity = " + launchVelocity.ToString());
+			//print ("targetDelta.normalized = " + targetDelta.normalized.ToString());
+			//print ("launchVelocity = " + launchVelocity.ToString());
 			
 			
 			instantiatedProjectile.velocity = launchVelocity;

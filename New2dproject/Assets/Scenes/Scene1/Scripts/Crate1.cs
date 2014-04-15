@@ -13,7 +13,7 @@ public class Crate1 : MonoBehaviour {
 		if(enemyHealth > 0){
 			enemyHealth -= damaged;
 			audio.Play();
-			print ("enemyHealth" + enemyHealth.ToString());
+			//print ("enemyHealth" + enemyHealth.ToString());
 			
 		}
 		if(enemyHealth <=0){
@@ -21,7 +21,7 @@ public class Crate1 : MonoBehaviour {
 			audio.Play();
 			Instantiate(explode, transform.position, transform.rotation);
 			Destroy(gameObject);
-			print ("enemyHealth" + enemyHealth.ToString());
+			//print ("enemyHealth" + enemyHealth.ToString());
 			
 		}
 	}

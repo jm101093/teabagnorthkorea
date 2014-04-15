@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	public int iconSizeX;
 	public int iconSizeY;
 	
-	public int playersHealth = 4;
+	public int playersHealth = 5;
 
 	void OnGUI(){
 
